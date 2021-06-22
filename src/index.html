@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tutorial Gulp untuk Pemula</title>
-    <link href="css/style.css" rel="stylesheet" />
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <p>Saya sedang belajar Gulp.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,600&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    @@include('./header.html')
+    <section>
+      <p>All our room types are including complementary breakfast</p>
+      <div class="section-content-wrapper">
+        <div class="section-content">
+          <h3>Luxury redefined</h3>
+          <p>
+            Our rooms are designed to transport <br />you into an environment
+            made for leisure. <br />Take your mind off the day-to-day of home
+            <br />life and find a private paradise for yourself.
+          </p>
+          <button>Explore</button>
+        </div>
+        <div class="section-content-image">
+          <img src="image/pool.png" alt="" />
+        </div>
+      </div>
+      <div class="section-content-wrapper">
+        <div class="section-content">
+          <h3>Leave your worries in the sand</h3>
+          <p>
+            We love life at the beach. Being close <br>to the ocean with access to
+            endless sandy <br>beach ensures a relaxed state of mind. It <br>seems like
+            time stands still watching the <br>ocean.
+          </p>
+          <button>Explore</button>
+        </div>
+        <div class="section-content-image">
+          <img src="/image/andrew-ruiz-fmz-B9At9iQ-unsplash.png" alt="" />
+        </div>
+      </div>
+      <div class="testimonials">
+        <h3>Testimonials</h3>
+        <p>"Calm, Serene, Retro – What a way to relax and enjoy"</p>
+        <p> Mr. and Mrs. Baxter, UK</p>
+        <i class="fas fa-arrow-alt-circle-left"></i>
+        <i class="fas fa-arrow-alt-circle-right"></i>
+      </div>
+    </section>
+    @@include('./footer.html')
+  </body>
 </html>
