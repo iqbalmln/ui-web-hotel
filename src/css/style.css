@@ -1,11 +1,11 @@
-.apartement {
+/* .apartement {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))), url("/image/apartment-bed-bedroom-chair-271618\ 1.png");
     background: linear-gradient(rgba(20, 39, 74, 0.5)), url("/image/apartment-bed-bedroom-chair-271618\ 1.png");
 }
 .facilities {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))), url("/image/palm.png");
     background: linear-gradient(rgba(20, 39, 74, 0.5)), url("/image/palm.png");
-  }
+  } */
   
   .facilities-section p {
     margin: 0 2rem;
@@ -56,9 +56,24 @@
   .rooms-rate-section .room-categories .room-title {
     background-color: #14274A;
     color: #fff;
-    padding: 1rem;
+    padding: 2rem;
+    text-align: left;
+    position: relative;
   }
-  
+
+  .rooms-rate-section .room-categories .room-title::after {
+    content: '\25be';
+    position: absolute;
+    right: 16px;
+    font-size: 1.5rem;
+  }
+  .rooms-rate-section .room-categories .room-title--active {
+    background-color: #e0b973;
+  }
+  .rooms-rate-section .room-categories .room-title--active::after {
+    content: '\25b4';
+  }
+
   .rooms-rate-section .room-categories .cost-room-details-wrapper {
     border: 1px solid black;
     border-radius: 0 0 5px 5px;
@@ -70,7 +85,10 @@
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: 100px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s;
+        padding: 0 15px;
   }
   
   .rooms-rate-section .room-categories .cost-room-details-wrapper .room-details {
@@ -103,10 +121,10 @@
     cursor: pointer;
   }
   
-  .contact-us {
+  /* .contact-us {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))), url("/image/contact.jpg");
     background: linear-gradient(rgba(20, 39, 74, 0.5)), url("/image/contact.jpg");
-  }
+  } */
   
   .contact-section {
     margin: 0 10rem;
@@ -186,6 +204,7 @@
     background-position: center;
     position: relative;
     color: #fff;
+    z-index: 12;
   }
   
   header .navbar {
@@ -231,6 +250,21 @@
     text-decoration: none;
     color: #fff;
     font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+  header nav ul li a:hover::after {
+    color: #e0b973;
+    width: 100%;
+  }
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: .1rem;
+    background-color: #e0b973;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in-out 250ms;
   }
   
   header .header-content {
@@ -292,6 +326,19 @@
   header .scroll-header i {
     font-size: 2rem;
   }
+  #buttonTop {
+    padding: 1rem;
+    background-color: #e0b973;
+    color: #fff;
+    /* display: none; */
+    z-index: 10;
+    border: none;
+    outline: none;
+    position: fixed;
+    cursor: pointer;
+    bottom: 20px;
+    right: 30px;
+  }
   
   section {
     font-family: "Poppins", sans-serif;
@@ -344,8 +391,9 @@
   }
   
   section .testimonials {
+    /* border: 1pz solid red; */
     color: #14274A;
-    padding: 3rem 0;
+    padding: 8rem 0 0 0;
   }
   
   footer {
@@ -358,6 +406,7 @@
     background-color: #14274A;
     color: #fff;
     padding: 2rem;
+    z-index: 11;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -396,5 +445,91 @@
     color: white;
     padding: .5rem 1rem;
     cursor: pointer;
+  }
+  .faq-hotel {
+    margin: 1rem;
+  }
+  .collapsible {
+    background-color: #14274A;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #e0b973;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    text-align: left;
+    transition: max-height 0.2s ease-out;
+    margin: 0 4rem;
+  }
+  .tablink {
+    background-color: #14274A;
+    color: #fff;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tabs-home-section {
+    width: 80%;
+    margin: 3rem auto;
+    height: 200px;
+  }
+  .tablink:hover {
+    background-color: #e0b973;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  .tabs-button {
+    outline: none;
+    background-color: #e0b973;
+    border: none;
+    padding: .5rem 1rem;
+    color: white;
+    margin: .5rem 0;
+    border-radius: 10px;
+  }
+  
+  #London {
+  background-image:  -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9uZG9uJTIwY2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+  background-position: center;
+  background-size: cover;
+  }
+  #Paris {
+    background-image:  -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))),url('https://images.unsplash.com/photo-1431274172761-fca41d930114?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGFyaXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #Tokyo {
+    background-image:  -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))),url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9reW98ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-size: cover;
+  }
+  #Oslo {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 39, 74, 0.5))),url('https://images.unsplash.com/photo-1560698862-c340d3c8bf38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3Nsb3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-size: cover;
   }
   /*# sourceMappingURL=style.css.map */

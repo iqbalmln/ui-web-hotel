@@ -30,6 +30,7 @@
   </head>
   <body>
     @@include('./header.html')
+    <button id="buttonTop">Top</button>
     <section>
       <p>All our room types are including complementary breakfast</p>
       <div class="section-content-wrapper">
@@ -60,7 +61,41 @@
           <img src="/image/andrew-ruiz-fmz-B9At9iQ-unsplash.png" alt="" />
         </div>
       </div>
-      <div class="testimonials">
+      <div class="tabs-home-section">
+        <div id="London" class="tabcontent">
+          <h1>London</h1>
+          <p>London is the capital city of England.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, odit impedit assumenda molestiae id dolore similique amet cupiditate error asperiores adipisci eos quo dolorum accusamus!</p>
+          <button class="tabs-button">Click me</button>
+        </div>
+        
+        <div id="Paris" class="tabcontent">
+          <h1>Paris</h1>
+          <p>Paris is the capital of France.</p> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, odit impedit assumenda molestiae id dolore similique amet cupiditate error asperiores adipisci eos quo dolorum accusamus!</p>
+          <button class="tabs-button">Click me</button>
+        </div>
+        
+        <div id="Tokyo" class="tabcontent">
+          <h1>Tokyo</h1>
+          <p>Tokyo is the capital of Japan.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, odit impedit assumenda molestiae id dolore similique amet cupiditate error asperiores adipisci eos quo dolorum accusamus!</p>
+          <button class="tabs-button">Click me</button>
+        </div>
+        
+        <div id="Oslo" class="tabcontent">
+          <h1>Oslo</h1>
+          <p>Oslo is the capital of Norway.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, odit impedit assumenda molestiae id dolore similique amet cupiditate error asperiores adipisci eos quo dolorum accusamus!</p>
+          <button class="tabs-button">Click me</button>
+        </div>
+        
+        <button class="tablink" onclick="openCity('London')" id="defaultOpen">London</button>
+        <button class="tablink" onclick="openCity('Paris')">Paris</button>
+        <button class="tablink" onclick="openCity('Tokyo')">Tokyo</button>
+        <button class="tablink" onclick="openCity('Oslo')">Oslo</button>
+      </div>
+      <div class="testimonials" id="hai">
         <h3>Testimonials</h3>
         <p>"Calm, Serene, Retro – What a way to relax and enjoy"</p>
         <p> Mr. and Mrs. Baxter, UK</p>
@@ -70,4 +105,5 @@
     </section>
     @@include('./footer.html')
   </body>
+  <script src="./js/app.js"></script>
 </html>

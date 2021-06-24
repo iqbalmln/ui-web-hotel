@@ -30,8 +30,8 @@ gulp.task('minify-js', async function () {
         .src([
             './src/js/*.js'
         ])
-        .pipe(gulpConcat('bundle.js'))
-        .pipe(gulpUglify())
+        // .pipe(gulpConcat('bundle.js'))
+        // .pipe(gulpUglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(gulpConnect.reload());
 });
@@ -56,7 +56,7 @@ gulp.task('watch', async function () {
     gulp.watch('./src/*.html', gulp.series('minify-html'));
 });
 gulp.task('files', function() {
-    gulp.src(['src/index.html'])
+    gulp.src(['src/index.html', 'src/rooms.html', 'src/facilities.html', 'src/contact-us.html', 'src/faq.html'])
     .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
